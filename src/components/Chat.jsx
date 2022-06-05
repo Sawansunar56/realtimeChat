@@ -1,12 +1,12 @@
 import React from 'react'
 
 const Chat = (props) => {
-  const { text, user } = props;
+  const { text, username } = props;
   const data = '9:12 AM'
   return (
-    <div className='chatbox-left flex flex-col'>
+    <div className={`${username === 'ME' ? 'chatbox-left' : 'self-end chatbox-right'} flex flex-col`}>
       <div className='text-xs text-yellow-300'>
-        {user}
+        {username}
       </div>
       <div className="text-md">
         {text}

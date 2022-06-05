@@ -1,8 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
+import ChatContext from './context/chats/ChatContext';
 
 const Login = () => {
   const [credentials, setCredentials] = useState({email: "", password: ""});
+  const context = useContext(ChatContext);
+  const { setUsername } = context;
 
   // Use navigate is the new version of use History and is used to redirect to other links/ pages.
   let history = useNavigate();
@@ -21,6 +24,8 @@ const Login = () => {
     console.log(json)
     if(json.success) {
       localStorage.setItem('token', json.authToken);
+      localStorage.setItem('username', json.username);
+      setUsername(json.username);
       history("/")
       // props.showAlert("Logged in successfully", "success");
     } else {

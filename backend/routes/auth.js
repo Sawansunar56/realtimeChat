@@ -54,9 +54,12 @@ router.post('/createuser', [
           id: user.id
         }
       }
+
+      const username = req.body.name;
+
       success = true;
       const authToken = jwt.sign(data, JWT_SECRET);
-      res.json({ success, authToken })
+      res.json({ success, authToken, username })
       
     } catch (error) {
       console.error(error.message);
@@ -103,11 +106,12 @@ router.post('/login', [
         id: user.id
       }
     }
+    const username = user.name;
 
     // This creates the a hash like pattern for our user data and stores it. SO that we will know when it's tampered with.
     const authToken = jwt.sign(data, JWT_SECRET);
     success = true;
-    res.json({ success, authToken })
+    res.json({ success, authToken, username })
 
   } catch (error) {
     console.error(error.message);

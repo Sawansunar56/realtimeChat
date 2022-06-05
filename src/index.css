@@ -2,15 +2,15 @@
 @tailwind components;
 
 .btn {
-  @apply rounded-lg shadow-lg shadow-rose-500/60 active:bg-rose-800 bg-rose-500 text-white hover:bg-rose-400 p-2;
+  @apply rounded-lg shadow-lg shadow-gray-100/60 active:bg-rose-800 bg-gray-100 text-black hover:bg-gray-400 p-2;
 }
 
 .chatbox-left {
-  @apply bg-teal-500 text-teal-50 ml-4 my-2 p-3 self-start rounded-r-2xl rounded-bl-2xl  before:w-0 before:h-0 before:border-8 before:top-0 before:border-t-teal-500 before:border-b-transparent before:border-l-transparent before:border-r-transparent mx-6  before:absolute relative before:-left-2 ;
+  @apply bg-sawan-400 text-teal-50 ml-4 my-2 p-3 self-start rounded-r-2xl rounded-bl-2xl  before:w-0 before:h-0 before:border-8 before:top-0 before:border-t-sawan-400 before:border-b-transparent before:border-l-transparent before:border-r-transparent mx-6  before:absolute relative before:-left-2 ;
 }
 
 .chatbox-right {
-  @apply bg-teal-500 text-teal-50 ml-4 my-2 p-3 self-start rounded-l-2xl rounded-br-2xl  before:w-0 before:h-0 before:border-8 before:top-0 before:border-t-teal-500 before:border-b-transparent before:border-l-transparent before:border-r-transparent mx-6  before:absolute relative before:-right-2 ;
+  @apply bg-sawan-400 text-teal-50 ml-4 my-2 p-3 self-start rounded-l-2xl rounded-br-2xl  before:w-0 before:h-0 before:border-8 before:top-0 before:border-t-sawan-400 before:border-b-transparent before:border-l-transparent before:border-r-transparent mx-6  before:absolute relative before:-right-2 ;
 }
 
 @tailwind utilities;
